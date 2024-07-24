@@ -1,27 +1,34 @@
 import ollama
 import chromadb
 import sys
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-MODEL = 'snowflake-arctic-embed:latest'
+load_dotenv('../.env')
+OPENAI_KEY = os.getenv('OPENAI_KEY')
+client = OpenAI(api_key=OPENAI_KEY)
+
 N_RESULTS = 3
 #PROMPT = "bully who says 'Ha-ha!'"
 if len(sys.argv) < 2:
-  PROMPT = "incompetent"
+  PROMPT = "incompetent worker"
 else:
     PROMPT = sys.argv[1]
-print(PROMPT)
 
-client = chromadb.PersistentClient(path="./db")
-collection = client.get_collection(name="docs")
+chroma_client = chromadb.PersistentClient(path="./db")
+collection = chroma_client.get_collection(name="docs")
 
 
-response = ollama.embeddings(
-  prompt=PROMPT,
-  model=MODEL
+response = client.embeddings.create(
+    input=PROMPT,
+    model="text-embedding-3-large"
 )
+prompt_embedding = response.data[0].embedding
+
 results = collection.query(
-  query_embeddings=[response["embedding"]],
-  n_results=N_RESULTS
+    query_embeddings=[prompt_embedding],
+    n_results=N_RESULTS
 )
 data = results['documents']
 

@@ -54,7 +54,6 @@ response = client.embeddings.create(
 )
 prompt_embedding = response.data[0].embedding
 
-# You can now use this embedding to query your Chroma collection
 results = collection.query(
     query_embeddings=[prompt_embedding],
     n_results=N_RESULTS
