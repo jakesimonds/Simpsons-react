@@ -9,10 +9,6 @@ init stuff (strings set four coords and dart is the throw)
 '''
 MODEL = 'snowflake-arctic-embed:latest'
 
-# if len(sys.argv > 1):
-#     dart = sys.argv[1]
-# else:
-#     dart = 'ice'
         
 #strings = ['really tasty delicious', 'disgusting awful overcooked', 'intriguing and interesting taste profile', 'decent but not memorable']
 strings = ['low', 'cold', 'high', 'hot']
