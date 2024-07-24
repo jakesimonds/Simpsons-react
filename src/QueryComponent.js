@@ -8,7 +8,8 @@ function QueryComponent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/query', { text: query });
+      const response = await axios.post('http://localhost:8000/query', { text: query });
+      //const response = await axios.post('/query', { text: query });
       setResults(response.data.result[0]); // Access the inner array
       console.log('Results:', response.data.result[0]);
     } catch (error) {
