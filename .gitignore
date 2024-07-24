@@ -2,7 +2,7 @@
 
 .env
 .conda
-test/GoogleNews-vectors-negative300.bin
+/test/GoogleNews-vectors-negative300.bin
 
 
 # dependencies
