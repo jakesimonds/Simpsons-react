@@ -21,9 +21,27 @@ OPENAI_KEY = os.getenv('OPENAI_KEY')
 
 client = OpenAI(api_key=OPENAI_KEY)
 
+def return_index(string):
 
 
+    def create_line_dictionary(file_path):
+        line_dict = {}
+        
+        with open(file_path, 'r') as file:
+            for line_number, line in enumerate(file, 1):
+                line_dict[line_number] = line.strip()
+        
+        return line_dict
 
+    # Example usage
+    file_path = 'simpsons_opt.txt'  # Replace with your file path
+    result = create_line_dictionary(file_path)
+
+    # Print the resulting dictionary
+    for key, value in result.items():
+        if string in value:
+            return key
+    return 1
 
 app = FastAPI()
 
@@ -38,24 +56,18 @@ app.add_middleware(
 
 @app.get("/test")
 async def test(request: Request):
-    print("Hit /test in fastAPI Simpsons-retrieval server")
     return {"message": "Hello World"}
 
 @app.post("/query")
 async def query(request: Request):
-    print("HIT /query in fastAPI Simpsons-retrieval server")
     data = await request.json()
-    print(data)
     PROMPT = data['text']
-    #PROMPT = 'STEM professional'
-
-    print(PROMPT)
 
     chroma_client = chromadb.PersistentClient(path="./db")
     collection = chroma_client.get_collection(name="docs")
+    print("TEST TEST")
 
 
-    MODEL = 'snowflake-arctic-embed:latest'
     N_RESULTS = 3
     response = client.embeddings.create(
         input=PROMPT,
@@ -66,12 +78,22 @@ async def query(request: Request):
     query_embeddings=[prompt_embedding],
     n_results=N_RESULTS
     )
-    data = results['documents']
+    data = results['documents'][0]
+    
+    #print(data)
+    
+    to_return = []
+    
+    for string in data:
+        to_return.append({return_index(string): string}) 
+    print(to_return)
+    
+
 
 
     flat_list = [item for sublist in data for item in sublist]
     #print(data)
-    return {"result": data}
+    return {"result": to_return}
 
 
 if __name__ == "__main__":
