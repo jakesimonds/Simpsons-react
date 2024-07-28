@@ -108,7 +108,6 @@ const Image = styled.img`
   width: 100px;
   height: 100px;
   margin-right: 20px;
-  border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 
