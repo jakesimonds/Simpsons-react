@@ -8,7 +8,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:8000/query', { text: query });
+//       const response = await axios.post('http://latenthomer.com/query', { text: query });
 //       setResults(response.data.result); // Access the inner array
 //       console.log('Results:', response.data.result);
 //     } catch (error) {
@@ -128,7 +128,7 @@ function QueryComponent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/query', { text: query });
+      const response = await axios.post('http://latenthomer.com/query', { text: query });
       setResults(response.data.result);
       console.log('Results:', response.data.result);
     } catch (error) {
