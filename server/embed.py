@@ -4,36 +4,36 @@
 import ollama
 import chromadb
 import re
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+# Initialize the OpenAI client
+
+load_dotenv('../.env')
+openAI_key = os.getenv('OPENAI_API_KEY')
+
+client = OpenAI(api_key=openAI_key)
 
 MODEL = 'snowflake-arctic-embed:latest'
 file_path = './simpsons_opt.txt'
 
 
-# Create chunks from the text with specified chunk size and overlap
-def generic_create_chunks(file_path, chunk_size, overlap_size):
-    with open(file_path, 'r') as file:
-        text = file.read()
-    chunks = []
-    length = len(text)
+#1024
+def generate_embedding_local(string, model):
+    response = ollama.embeddings(model=model, prompt=string)
+    return response['embedding']
+
+# longer than 1024
+def generate_embedding_openAI(string):
+    response = client.embeddings.create(
+    input=string,
+    model="text-embedding-3-large")
+    embedding = response.data[0].embedding
+    return embedding
     
-    for i in range(0, length, chunk_size):
-        chunk = text[i:i + chunk_size]
-        if len(chunk) == chunk_size:
-            chunks.append(chunk)
 
-    for i in range(overlap_size, length, chunk_size):
-        chunk = text[i:i + chunk_size]
-        if len(chunk) == chunk_size:
-            chunks.append(chunk)
-
-    return chunks
-
-
-
-
-
-
-def simpsons_chunks_opt(file_path):
+def chunk_file(file_path):
     # Read the contents of the file
     with open(file_path, 'r') as file:
         content = file.read()
@@ -43,8 +43,8 @@ def simpsons_chunks_opt(file_path):
 
 def embed(MODEL, chunks, collection):
     for i, d in enumerate(chunks):
-        response = ollama.embeddings(model=MODEL, prompt=d)
-        embedding = response["embedding"]
+        embedding = generate_embedding_local(d, MODEL)
+        #embedding = generate_embedding_openAI(d)
         collection.add(
             ids=[str(i)],
             embeddings=[embedding],
@@ -57,24 +57,13 @@ def embed(MODEL, chunks, collection):
 client = chromadb.PersistentClient(path="./db")
 collection = client.create_collection(name="docs")
 
-#chunks = create_chunks(file_path, CHUNK_SIZE, OVERLAP_SIZE)
 
-#chunks = cofounder_match_chunks(file_path)
-#chunks = chunks[:-1] # cofounder hack
+chunks = chunk_file(file_path)
 
-#chunks = simpsons_chunks(file_path)
-chunks = simpsons_chunks_opt(file_path)
-#chunks = chunks[1:] # simpsons
-
-print(f"length of chunks: {len(chunks)}")
-print(f"first chunk: {chunks[0]}")
-
-# for i in range(len(chunks)):
-#     print("\n\n NEW CHUNK \n\n")
-#     print(f"chunk {i}: {chunks[i]}")
-# print(chunks)
-
+# print(f"length of chunks: {len(chunks)}")
+# print(f"first chunk: {chunks[0]}")
 embed(MODEL, chunks, collection)
+    
 
 
 

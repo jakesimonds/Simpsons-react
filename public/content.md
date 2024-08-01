@@ -1,13 +1,16 @@
-Input: A word, words, or phrase 
+**Input:** A word, words, or phrase 
 (ex: *STEM professional*, *silly boy*, *The Godfather*, *evil genius*...)
 
-Output: 3 Simpsons characters, found by cosine-similarity on embedding vectors! 
+**Output:** Three Simpsons characters most closely matching  your query, found by cosine-similarity on embedding vectors! 
 
 ## Try it out! 
 
 {QueryComponent}
 
 
-[jakesimonds.github.io](jakesimonds.github.io)
+## Embeddings Bake-Off Results
+
+
+[jakesimonds.github.io](https://jakesimonds.github.io)
 
 

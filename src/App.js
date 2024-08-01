@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import QueryComponent from './QueryComponent';
 import Header from './Header';
+import styled from 'styled-components';
 
 function App() {
   const [mdContent, setMdContent] = useState('');
@@ -12,6 +13,11 @@ function App() {
       .then(response => response.text())
       .then(text => setMdContent(text));
   }, []);
+  const MarkdownContainer = styled.div`
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+`;
 
   const components = {
     p: ({ node, ...props }) => {
@@ -29,9 +35,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={
-            <div className="markdown-content">
+            <MarkdownContainer>
+              <div className="markdown-content">
               <ReactMarkdown components={components}>{mdContent}</ReactMarkdown>
             </div>
+            </MarkdownContainer>
           } />
           <Route path="/darts" element={<Darts />} />
         </Routes>

@@ -1,0 +1,187 @@
+{
+  "Beer mascot": {
+    "expected": "Duffman Beer",
+    "results": [
+      "Duffman Beer: Beer mascot, muscular, energetic, Duffman, promotional antics, catchphrase, commercialism, enthusiastic, humorous.",
+      "Gil Gunderson: Unlucky salesman, Gil, desperate, Springfield, various jobs, optimistic, down-on-luck, humorous, endearing.",
+      "Otto Mann: Bus driver, laid-back, heavy-metal lover, irresponsible, Otto, school, rebellious, chaotic, music enthusiast, humorous."
+    ],
+    "score": 3
+  },
+  "Nuclear power plant owner": {
+    "expected": "Mr Burns",
+    "results": [
+      "Mr Burns: Wealthy, tyrannical, nuclear power plant owner, greedy, frail, cunning, ruthless, villainous, Mr. Burns, Homer, Smithers, power-hungry, iconic catchphrase.",
+      "Carl Carlson: Co-worker, calm, rational, Carl, Homer, Lenny, nuclear power plant, intelligent, level-headed, friendship.",
+      "Lenny Leonard: Co-worker, easygoing, loyal, Lenny, Homer, Carl, nuclear power plant, friendship, humorous, frequent mishaps."
+    ],
+    "score": 3
+  },
+  "Convenience store clerk": {
+    "expected": "Apu Nahasapeemapetilon",
+    "results": [
+      "Apu Nahasapeemapetilon: Convenience store owner, hardworking, diligent, immigrant, resourceful, Apu, Kwik-E-Mart, family-oriented, intelligent, cultural richness.",
+      "Cookie Kwan: Real estate agent, competitive, aggressive, Cookie Kwan, Springfield, territorial, assertive, business-minded.",
+      "Squeakyvoiced Teen: Awkward, high-pitched voice, teenage worker, Squeaky Voiced Teen, multiple jobs, inept, humorous, adolescence."
+    ],
+    "score": 3
+  },
+  "Comic book store owner": {
+    "expected": "Comicbook Guy",
+    "results": [
+      "Comicbook Guy: Sarcastic, overweight, comic book store owner, pop culture expert, critical, Comic Book Guy, nerdy, knowledgeable, cynical.",
+      "Apu Nahasapeemapetilon: Convenience store owner, hardworking, diligent, immigrant, resourceful, Apu, Kwik-E-Mart, family-oriented, intelligent, cultural richness.",
+      "Moe Szyslak: Bar owner, gruff, cynical, unrequited love, Moe\u2019s Tavern, Homer, Marge, bartender, tough, vulnerable, loyal."
+    ],
+    "score": 3
+  },
+  "Incompetent doctor": {
+    "expected": "Drnick Riviera",
+    "results": [
+      "Drnick Riviera: Quack doctor, charming, incompetent, Dr. Nick, medical humor, cheap solutions, malpractice, enthusiastic, humorous.",
+      "Lionel Hutz: Incompetent lawyer, Lionel Hutz, sleazy, humorous, legal cases, Springfield, unethical, desperate, opportunistic.",
+      "Dr Hibbert: Physician, good-natured, hearty laughter, Dr. Hibbert, Springfield, competent, caring, compassionate, reliable, humorous."
+    ],
+    "score": 3
+  },
+  "Evangelical neighbor": {
+    "expected": "Ned Flanders",
+    "results": [
+      "Ned Flanders: Cheerful, devout Christian, neighbor, optimistic, green sweater, moral, kind, generous, Ned, Homer, Leftorium, faithful, patient.",
+      "Reverend Lovejoy: Pastor, dry sermons, disinterested, Reverend Lovejoy, church, faith, jaded, moral guidance, cynical, insightful.",
+      "Helen Lovejoy: Pious, gossiping, moralizing, Helen, Reverend Lovejoy, judgmental, community figure, critical, hypocritical, church."
+    ],
+    "score": 3
+  },
+  "Scottish groundskeeper": {
+    "expected": "Groundskeeper Willie",
+    "results": [
+      "Groundskeeper Willie: Scottish, custodian, fiery, muscular, thick accent, Willie, school, gruff, hardworking, humorous, prideful.",
+      "Gil Gunderson: Unlucky salesman, Gil, desperate, Springfield, various jobs, optimistic, down-on-luck, humorous, endearing.",
+      "Mr Smithers: Devoted, assistant, unrequited love, competent, Smithers, Mr. Burns, loyal, intelligent, organized, conflicted."
+    ],
+    "score": 3
+  },
+  "Hapless bus driver": {
+    "expected": "Otto Mann",
+    "results": [
+      "Otto Mann: Bus driver, laid-back, heavy-metal lover, irresponsible, Otto, school, rebellious, chaotic, music enthusiast, humorous.",
+      "Gil Gunderson: Unlucky salesman, Gil, desperate, Springfield, various jobs, optimistic, down-on-luck, humorous, endearing.",
+      "Hans Moleman: Elderly, unfortunate, frail, Hans Moleman, accidents, optimistic, humorous, resilient, Springfield, pathos."
+    ],
+    "score": 3
+  },
+  "Clown TV show host": {
+    "expected": "Krusty Clown",
+    "results": [
+      "Krusty Clown: Entertainer, cynical, children\u2019s show host, chaotic, gambler, Krusty, Homer, Bart, comedic, performer, complex, troubled.",
+      "Troy McClure: Washed-up actor, cheesy smile, infomercials, Troy, Hollywood satire, confident, deluded, humorous, faded star.",
+      "Sideshow Bob: Former entertainer, criminal mastermind, cultured, hates Bart, wild hair, Sideshow Bob, Krusty, intelligent, revenge-driven, complex."
+    ],
+    "score": 3
+  },
+  "Mafia boss": {
+    "expected": "Fat Tony",
+    "results": [
+      "Fat Tony: Mafia boss, calm, ruthless, Fat Tony, Springfield, criminal activities, honorable moments, complex.",
+      "Mayor Quimby: Corrupt, womanizer, Boston accent, political figure, Mayor Quimby, scandalous, self-serving, charismatic, superficial.",
+      "Sideshow Bob: Former entertainer, criminal mastermind, cultured, hates Bart, wild hair, Sideshow Bob, Krusty, intelligent, revenge-driven, complex."
+    ],
+    "score": 3
+  },
+  "B-movie actor": {
+    "expected": "Troy McClure",
+    "results": [
+      "Rainier Wolfcastle: Action movie star, McBain, muscular, Rainier, Hollywood satire, tough, parody, humorous, famous.",
+      "Troy McClure: Washed-up actor, cheesy smile, infomercials, Troy, Hollywood satire, confident, deluded, humorous, faded star.",
+      "Dolph Starbeam: Bully, shaggy hair, laid-back, Dolph, school, rebellious, intelligent, mischief, Bart, complex."
+    ],
+    "score": 2
+  },
+  "Dimwitted police chief": {
+    "expected": "Chief Wiggum",
+    "results": [
+      "Chief Wiggum: Police chief, bumbling, lazy, loves donuts, Clancy, Ralph, law enforcement, humorous, incompetent, occasional bravery.",
+      "Ralph Wiggum: Eccentric, bewildered, innocent, Chief Wiggum\u2019s son, Ralph, school, humorous, nonsensical, childlike, endearing.",
+      "Mayor Quimby: Corrupt, womanizer, Boston accent, political figure, Mayor Quimby, scandalous, self-serving, charismatic, superficial."
+    ],
+    "score": 3
+  },
+  "Hypercompetent child": {
+    "expected": "Lisa Simpson",
+    "results": [
+      "Martin Prince: Intelligent, teacher\u2019s pet, academic achiever, nerdy, Martin, Bart, Lisa, school, enthusiastic, optimistic, bullied.",
+      "Lisa Simpson: Intelligent, saxophone prodigy, academic, social justice, eight-year-old, Lisa, Homer, Marge, Bart, Maggie, compassionate, environmentalist, feminist.",
+      "Dolph Starbeam: Bully, shaggy hair, laid-back, Dolph, school, rebellious, intelligent, mischief, Bart, complex."
+    ],
+    "score": 2
+  },
+  "Beer Loving Nuclear Power Plant Safety Inspector": {
+    "expected": "Homer Simpson",
+    "results": [
+      "Lenny Leonard: Co-worker, easygoing, loyal, Lenny, Homer, Carl, nuclear power plant, friendship, humorous, frequent mishaps.",
+      "Carl Carlson: Co-worker, calm, rational, Carl, Homer, Lenny, nuclear power plant, intelligent, level-headed, friendship.",
+      "Duffman Beer: Beer mascot, muscular, energetic, Duffman, promotional antics, catchphrase, commercialism, enthusiastic, humorous."
+    ],
+    "score": 0
+  },
+  "Mythic Town Founder": {
+    "expected": "Jebediah Springfield",
+    "results": [
+      "Jebediah Springfield: Town founder, legendary, Jebediah, Springfield, historical, heroic, respected, mythical.",
+      "Mayor Quimby: Corrupt, womanizer, Boston accent, political figure, Mayor Quimby, scandalous, self-serving, charismatic, superficial.",
+      "Mr Burns: Wealthy, tyrannical, nuclear power plant owner, greedy, frail, cunning, ruthless, villainous, Mr. Burns, Homer, Smithers, power-hungry, iconic catchphrase."
+    ],
+    "score": 3
+  },
+  "Skateboarding Smart Aleck": {
+    "expected": "Bart Simpson",
+    "results": [
+      "Bart Simpson: Mischievous, troublemaker, skateboarder, rebellious, prankster, poor grades, ten-year-old, Bart, Homer, Marge, Lisa, Maggie, iconic catchphrases.",
+      "Dolph Starbeam: Bully, shaggy hair, laid-back, Dolph, school, rebellious, intelligent, mischief, Bart, complex.",
+      "Comicbook Guy: Sarcastic, overweight, comic book store owner, pop culture expert, critical, Comic Book Guy, nerdy, knowledgeable, cynical."
+    ],
+    "score": 3
+  },
+  "Pathetic Salesman": {
+    "expected": "Gil Gunderson",
+    "results": [
+      "Gil Gunderson: Unlucky salesman, Gil, desperate, Springfield, various jobs, optimistic, down-on-luck, humorous, endearing.",
+      "Lionel Hutz: Incompetent lawyer, Lionel Hutz, sleazy, humorous, legal cases, Springfield, unethical, desperate, opportunistic.",
+      "Troy McClure: Washed-up actor, cheesy smile, infomercials, Troy, Hollywood satire, confident, deluded, humorous, faded star."
+    ],
+    "score": 3
+  },
+  "Educator with overbearing mother": {
+    "expected": "Principal Skinner",
+    "results": [
+      "Mrs Hoover: Teacher, disinterested, cynical, Mrs. Hoover, Lisa, school, burnt-out, caring moments, educational challenges.",
+      "Agnes Skinner: Overbearing mother, sharp tongue, domineering, Agnes, Principal Skinner, controlling, abrasive, humorous.",
+      "Mrs Krabappel: Weary, chain-smoker, teacher, sarcastic, Edna, Bart, school, cynical, caring, frustrated, disillusioned."
+    ],
+    "score": 0
+  },
+  "Loyal assistant": {
+    "expected": "Mr Smithers",
+    "results": [
+      "Mr Smithers: Devoted, assistant, unrequited love, competent, Smithers, Mr. Burns, loyal, intelligent, organized, conflicted.",
+      "Lenny Leonard: Co-worker, easygoing, loyal, Lenny, Homer, Carl, nuclear power plant, friendship, humorous, frequent mishaps.",
+      "Carl Carlson: Co-worker, calm, rational, Carl, Homer, Lenny, nuclear power plant, intelligent, level-headed, friendship."
+    ],
+    "score": 3
+  },
+  "European boy": {
+    "expected": "Uter Zorker",
+    "results": [
+      "Uter Zorker: Exchange student, German, Uter, loves candy, overweight, school, foreign, innocent, humorous.",
+      "Dolph Starbeam: Bully, shaggy hair, laid-back, Dolph, school, rebellious, intelligent, mischief, Bart, complex.",
+      "Kearney Zzyzwicz: Bully, bald, older appearance, Kearney, school, tough, adult responsibilities, rebellious, humorous."
+    ],
+    "score": 3
+  },
+  "summary": {
+    "total_score": 52,
+    "max_possible_score": 60,
+    "percentage_score": 86.66666666666667
+  }
+}

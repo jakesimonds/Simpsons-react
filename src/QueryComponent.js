@@ -1,64 +1,4 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// function QueryComponent() {
-//   const [query, setQuery] = useState('');
-//   const [results, setResults] = useState([]);
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await axios.post('http://latenthomer.com/query', { text: query });
-//       setResults(response.data.result); // Access the inner array
-//       console.log('Results:', response.data.result);
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   };
-
-//   return (
-//     <div className="query-component">
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           value={query}
-//           onChange={(e) => setQuery(e.target.value)}
-//           placeholder="Description here... "
-//         />
-//         <button type="submit">Submit</button>
-//       </form>
-//       <div className="results-section">
-//         {results.length > 0 && (
-//           <>
-//             <h3>Three closest:</h3>
-//             <ul>
-//               {results.map((result, index) => {
-//                 const [number, description] = Object.entries(result)[0];
-//                 return (
-//                   <div key={index}>
-//                     <img 
-//                       src={`/characters/${number}.webp`} 
-//                       alt={`Image for ${description.split(':')[0]}`}
-//                       style={{ width: '100px', height: '100px', marginRight: '10px' }}
-//                     />
-//                     <div>
-//                       <strong>{description.split(':')[0]}</strong>
-//                       <p>{description.split(':')[1]}</p>
-//                     </div>
-//                   </div>
-//                 );
-//               })}
-//             </ul>
-//           </>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default QueryComponent;
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -108,10 +48,7 @@ const Image = styled.img`
   width: 100px;
   height: 100px;
   margin-right: 20px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
-
   &:hover {
     transform: scale(1.1);
   }
@@ -122,11 +59,12 @@ const ResultInfo = styled.div`
 `;
 
 function QueryComponent() {
+  //const initialQuery = "Preachy mustache-sporting decent guy, says hi-diddly-ho!";
+  const initialQuery = "Preachy mustache-sporting decent guy, says hi-diddly-ho!";
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const fetchResults = async (query) => {
     try {
       const response = await axios.post('http://latenthomer.com/query', { text: query });
       setResults(response.data.result);
@@ -136,6 +74,15 @@ function QueryComponent() {
     }
   };
 
+  useEffect (() => {
+    fetchResults(initialQuery);
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    fetchResults(query);
+  };
+
   return (
     <QueryBox>
       <Form onSubmit={handleSubmit}>
@@ -143,7 +90,7 @@ function QueryComponent() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Description here... "
+          placeholder="Example: Preachy mustache-sporting decent guy, says hi-diddly-ho!"
         />
         <Button type="submit">Submit</Button>
       </Form>
